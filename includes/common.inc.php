@@ -9,4 +9,10 @@
     if(PHP_VERSION < '4.1.0'){
         exit('Version is too low!');
     }
+
+    // 引入核心函数库
+    require ROOT_PATH.'includes/global.func.php';
+
+    // 执行耗时
+    define('START_TIME',_runtime());
  ?>
