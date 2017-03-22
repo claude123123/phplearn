@@ -19,7 +19,7 @@
      ?>
      <div id="register">
          <h2>会员注册</h2>
-         <form action="post.php" method="post">
+         <form action="post.php" name="register" method="post">
              <dl>
                  <dt>请认真填写以下内容</dt>
                  <dd>用户名：<input type="text" name="username" class="text">(*必填，至少两位)</dd>

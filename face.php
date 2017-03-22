@@ -9,6 +9,7 @@
      <meta charset="UTF-8" />
      <title>多用户留言系统--头像选择</title>
       <?php require ROOT_PATH.'includes/title.inc.php'; ?>
+      <script src="js/opener.js"></script>
  </head>
  <body>
     <div id="face">
