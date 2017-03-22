@@ -1,7 +1,25 @@
 <?php 
+    session_start();
     define('IN_TG',true);
     define('SCRIPT','register');
     require dirname(__FILE__).'/includes/common.inc.php';
+    if(@$_GET['action'] == 'register') {
+        //为了防止恶意注册，跨站攻击
+    //     echo $_POST['yzm'];
+    //     echo $_SESSION['code'];
+    //     if($_POST['yzm']==$_SESSION['code']){
+    //         $_username = $_POST['username'];
+    //         echo $_username;
+    //     }
+    //     else
+    //         exit('验证码不正确');
+    // }
+    //创建一个数组，用来存放提交过来的合法数据
+    $_clean = array();
+    $_clean['username']=$_POST['username'];
+    $_clean['password']=$_POST['password'];
+    print_r($_clean);
+    }
  ?>
  <!DOCTYPE html>
  <html lang="en">
@@ -19,7 +37,7 @@
      ?>
      <div id="register">
          <h2>会员注册</h2>
-         <form action="post.php" name="register" method="post">
+         <form method="post" action="register.php?action=register" name="register" >
              <dl>
                  <dt>请认真填写以下内容</dt>
                  <dd>用户名：<input type="text" name="username" class="text">(*必填，至少两位)</dd>
