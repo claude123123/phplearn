@@ -1,5 +1,7 @@
 <?php  
     define('IN_TG',true);
+
+    define('SCRIPT','index');
     require dirname(__FILE__).'/includes/common.inc.php';
     
 ?>
@@ -9,9 +11,9 @@
 <head>
     <meta charset="UTF-8" />
     <title>首页</title>
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="stylesheet" href="styles/1/basic.css" />
-    <link rel="stylesheet" href="styles/1/index.css" />
+    <?php 
+    require ROOT_PATH.'includes/title.inc.php';
+     ?>
 </head>
 <body>
     <?php  
