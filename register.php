@@ -15,9 +15,11 @@
     //         exit('验证码不正确');
     // }
     //创建一个数组，用来存放提交过来的合法数据
+    
+        include ROOT_PATH.'includes/register.fun.php';
     $_clean = array();
-    $_clean['username']=$_POST['username'];
-    $_clean['password']=$_POST['password'];
+
+    $_clean['username'] = _check_username($_POST['username']);
     print_r($_clean);
     }
  ?>
